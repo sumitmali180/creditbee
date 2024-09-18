@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KreditBee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 2px -2px gray;
+        }
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin-left: auto;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .sign-up-btn {
+            background-color: #ff4b5c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .why-choose {
+            text-align: center;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+        .reasons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .reason {
+            text-align: center;
+            max-width: 250px;
+        }
+        .reason img {
+            width: 50px;
+            height: 50px;
+        }
+        .blog {
+            padding: 40px;
+            background-color: white;
+            text-align: center;
+        }
+        .blog-posts {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .blog-post {
+            max-width: 300px;
+        }
+        .blog-post img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .create-account {
+            padding: 40px;
+            background-color: #ffe066;
+            text-align: center;
+        }
+        .form-container {
+            display: inline-block;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            text-align: left;
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background-color: #3d5a80;
+            color: white;
+            padding: 15px 30px; /* Increased padding for larger button */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; /* Increased font size for better readability */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://ik.imagekit.io/krazybee/kreditbee_in/logo_horizontal_BNqOuZWg_.svg" alt="KreditBee Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Loans</a></li>
+            <li><a href="#">Calculators</a></li>
+            <li><a href="#">Credit Report</a></li>
+            <li><a href="#">Refer & Earn</a></li>
+        </ul>
+        <button class="sign-up-btn">Sign Up</button>
+    </nav>
+
+    <section class="why-choose">
+        <h1>Why choose KreditBee?</h1>
+        <div class="reasons">
+            <div class="reason">
+                <img src="lower_interest.png" alt="Lower Interest Rates">
+                <h3>Lower Interest Rates</h3>
+                <p>Get loans for multiple purposes at lower interest rates to suit your needs.</p>
+            </div>
+            <div class="reason">
+                <img src="fast_processing.png" alt="Fast Processing">
+                <h3>Fast Processing and Disbursal</h3>
+                <p>Apply online, check your eligibility, and get money directly in your bank in 10 minutes.</p>
+            </div>
+            <div class="reason">
+                <img src="easy_repayment.png" alt="Easy Repayment">
+                <h3>Easy Repayment Options</h3>
+                <p>Repay the loan amount in easy EMIs with flexible tenure options.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog">
+        <h2>Fresh from the Blog</h2>
+        <div class="blog-posts">
+            <div class="blog-post">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAABIFBMVEX///8TGSwAAAAUGy3///0TGir+1TYAABAAABkAABsWGi38//8AABYAAA4AABIUGSoAAB7p7O4AAAj2+Pe7vsITGS8AAAYAACKjqKzQ0dMUGC8PGS0lJz319/oGDymvsreIi5H/2TJ3en9TVl/LzdIACCHY2tsAACZ5fIaMj5OAg4gLEic/Q1FYXGIyNT+sr7QADiKWmZ87PkWhoKpdX2tvcXVBRVATGDNNT14ADzCLgz3cv0fqzEbFsklXUSYAAi7/2k5sZDEXHCYAGBn/30UAFCtTTDFlWi63nUMhJR+XijuNeDncuz1KT1M9OSl3ennGrTNFRSknLh9tb3yokjP+0lK7qkUsL0DV2eSpjTpZXGn/4j8jKDVsbCogKSQFFR8UCEaOAAAMQUlEQVR4nO2bi1/bRhLHtSsLW+9HLGyLSBhsGTuLbbmAIc2LUq6PXHPXO3oll3DN//9f3MxK8gNIGpxL3KPz/aSJkWRp9dPsb2ZWVFEIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgvg/p1LBv2Pfj2c//AmJx8OUb/LqV4PeuoeyFuC5H6ROylxXZaIWHPrrHtCXp6L4+9UtpjIVMVjKt9c9pC+NqXQhBkCAQgPDiDYn6x7Ul6Wi1IMoZBpjuQbwbxjxuvKnMsYuPwYJUIMF+D33hArG/wzfisKbGtSO1je+LwCk/4Ez6slgh/+mqaohyxqwzXsbCBUQoFLpcdcaFhoc2KqqsZkGYamB/rltsbKuUgyua5pKj0eNXAMltlx59yBCFB1H2nGugBomJ5/BFSumpBjKWl3X7G/utfIhTHINVE1lDb3ReByVGoSNz3RtUKDVbtfXp0GT51kvliEBQWFABEBCDLUw/frJ02fPX2hSBY25zoP/9cV9BCTY5o0av1DM9WjwgDNxBs+ilRteReluutIQVc17dr6zsXP6TSKdATZVY9P8ndP93v5lYu5UbQ7KngmIO76utuQB30rPlNjggdrv4oa+nmsQJl+/3djY2Nl4+m0eB65rKe/RYGnrHZ5l7Biaqz9Q4jQ0XJW3PnRs5W7y3onxu7O6cqCHTKRcm/jKSMANG6DB3pMNyfnzLHcE7ermMMwWUOZMHz53u/HHDza24EIexMGhw7T0IXzRbzabB/Vid8XfLqn3PqMEEAlw9pOEGdAhsVo2TViuwV++Oy80+D4pkmMiBtdH4vPNgD/KAyEWHH5qxB9/6ZkG8YXNX6GULe55dqfcX+dew9NrgBWo7Tuc+I6gD8YNfPgqMwwmwkKDvR9yCTZOfywyAzQNTtZdXk/xHca8Np7EVHZ1173bpC41gClm4h2aSmsTpB6W++tOaBRNm8ocw7+j3dwB8MHq1paKEsC11FyDrR+f5hK8fbm3UDEKPlaWNXA1XWoADw1cBHLMbeN8j49IDcAPir2QFlrBFksOy/11B8aT1dJUuDA0rzM/t/k+d14xs1SUcW2mgSE1cNXHf4WkgJ74zIuiWanIDMHri98FDZjUQPFtsE0+mY2izHPzsFnIfHGvXm+ZoAGTGiitAQAn7m1bGhMnPQDvsl41DNF5tLs75AJGdj3GbtpkZfUSo98I57cpNYi8n2QU7Dz1jpcaB8Nd6h9nc0HZz1RDv8Bx9MbjcdNX4vHuUVOGb709fHUEdqsUNWHvMOBVy64OyjhQxrzhWbvQqaAoTNi2zfGbqIElV2/ifcietWZx1d5kOBodNucG0RvAhqNx/AkLnxfptfbIeJw74s7p34ShiiSa71Kt4cI3/SpjjTYM9++WZqQnJqrR5F6Nt+pa1fM4pNttN/CSJNX5RSxFUCYcUmEYGcw6MQoNtp2QNUCDTooawPyP7JkGYxn44xrTiobFH/Jacpw0rNpBMYgO1xMAN6wswpvsepPY+EHOhI2f91409H98/09vNh9UdbM3n5f+posawH0xIzFiuaOpR5E4rIoI112UCy5CQ8PFGO8SRVAGcGgUJinYsIDmLNfACqMUNHhlaTgX09SDOKjMNYBGrsbUQIbEay9VwyhCsYI+XrDL060wOg7RrdortzSd7FqnHH17WiTGX3558q/TnfNfvz2eaeC1FzQIXM0bKAdg56zm596HGhjCZUkNzK0Pk0U4Vcd2VTU9QefnUGlk1Wn/xMqw+Cw0UA3UYHKYqWzrst/vX8w0kDfeuwTJsKKEbCygc3G0KsoFDg3tnstU3QmrGZRxy271CRpo7MXLPAw2dgD578+NeW4YLWhgu5o43A3g6QVdbAJRgxpYq5uxi90ePCPIdZd134dYVg0c4RuouN5N0d38jgclOcvngoYamJgXQvFGnrqSayD2O8POiIeqyHPOsMYiu+2b/iObheGZqUwzI5Qbdi04erRq+jy8rkHjSaFByc7bb5LZfj43I78KlXXSgBTmoWGZOEqpQdqRB73KmIApIFdpVSM7wsmjRmexjO/40lVZ5BUaeKUGSUemkEIDwxVJIlTN3X+dN/khc5qyPO8nYcRbLe4a9limo4sUHPuDBfcH6KdyGpaEyXfn1zTY2Pj33mz/5jxHYRzAZA9VVYzKMGzWIM+mMaYpH8Kgim1I3GqmkFhHcFsQuNLfYdBjB5SXGlS1EDyxUmpQOBscLGemXNkT0y7c+aCGcQga9MaHIoys8cBTxUm+4Y1ghr3aSwA0nEUJmJY8f3tdgp0FDYIFDTZxsQF7bdXlR/FMgzSvn7vgE/brevvEsS24l0YHzELFPF+R3uXzM62YCyD8bRpADx9mWeJtOsyVpQmksOyoNRlm3BauC3EwTNTsojXppLYnNPV4xTiAOtFerg/C9Nnb0gkKCc6fz+dCMK8Q0BPd0ZR7wgBzvPRLDZw8KOo2HK5bDREx4Vn8qqdMPNDAL5ZL4kCTfSPmxjC9NQ5Ua4wJ1d/WmBHCF9+kmpbZtQwK99QK+ECZHkMMOrpg0XFSC/iK630QsvpyZmSR/p+Xvz55enp6XnriD3NPdIMFP7BlrexPMt1lYeMqLjSwu3kc2PIbie44o/42hs9YZzIOpAj+TAPIjd6CBoWx4VxwxrPPoTVRjhoahEbiOdWHhwfYTA4TA7wxaTj25UWzZ66+3LcvrokQPn7xYq/x23ffvPzl2U+nG09fOvMySUwX8kJVaoCdH4ehyPqpWYMJkGsQYyLUrM6km4cOWGPADCyupQZNC8PkwxpYhQa9TQiVI5hLMPPS/Ud1PCHWURMPyvts2i42rF4oTnTjmgigtqaF4vFeo+Fpv2Xeu3neqC3EWxEHeEcTboQaFoaFBqW42hneERxw9JWPbRJ06TiZcPnuSpQaOHMNcs+TB0gNCpNrWlKDHmdaPgDMEX0Ts68qC0iZNNqrKoDmdF2D/C1b3kWG0RZT564Z+POAQ0/EfgGT4gS8IZvO5kI+cjti3pGsbYZOEjSxw4bi8B3u9qeOG5a5sfCDHleZZh/EZh2/g56oH+CaY2tgQfbBhDJNVI3DeRRz2xMWOMylMLRgbOLvCgTMG62+IHdyfTKUGkgdZmogen9hARg9Me8b4TF0hIbrB4txYF5CEk+zYb9jZ1Db7Mo6T4Uqd/8QtmhuGBYaRBHmxgouY2maIxKsAFEDLWpwxIJyKsL46XJoMuyrYUeDGimxe9Czh/kGYUMR7qz+IgjruY8jCeOFFrWYC7gIAmFZ1bCvWfADrGQTqORTD3J5VJVv6+pcYG+YZq4rrbjMjanUoM5R760omSpyDWULMlYYygIhAtOXLVdkGFtZthWyJJAlA4/AWrMM/3JeryxB5aYrvgdhY7DNNai6bq2dN8WKyaFmBNtyDCMoNVB6V1ZiaFDF6nnegkysVoVhMDfjk/1UiBr2zoFIPKkB3GIGjhEmuFhQtyMhoPcCROYExaxvVmsRhGWU8qkve8qDwIJWASTlnU9Yaqp8bCCkdktGwWwuYJzuyl4J/uAP+9A76zrvzs5tNvc53+SXg2L1HmrkA9gS8JOucnJ5eXmFcfAQPrTlOy+ld7HHuTfF1YG6eFiyP2zmNgRltD8Ywdejiy5KIsvR9hVc2djt4rrKqokBXdv7iCAIpv7yK7H8U6VY2TIrty+bxb1eXFxGHgZ/8t/1Ki5uzj7lX3/w/pc5lfxaD/x8+Vo+j2LDivc+P7MSG7fMBk8utGPOMCII5um2fBe1qIH8XGqQD6myvMaVR42JW0sNyv3yIRYamPkjNZffP86Yn64IOjO/srxcefgnagAxaN+QQO8fcm7XPE+HsnQ66cnYW/6mHG9lecuN08vbumWElcWl0Q+sxd48pfneRdVPY5u72kIOhNB/iO1YvTmZTLa78a1juXc0oY1b0uBkcenWnM/m+wyIsKhBisvEN4LunmsAhVmaayALw2Id977f9DIm1PB28bpJVcNZwbveUX15oMIJSw3u7S9hfRhTidupLWAyGOLVugezLrAJbU55NRW8+ftH31NkOvTHu6NH6x4J8Qdgzb8s+IdAKvAJ7/PvDaTBn/j/5SIIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiA+K/8FuMcYkXGqMAUAAAAASUVORK5CYII=" alt="Comfy Throws">
+                <h3>9 Comfy Throws for Cozy Autumn Vibes</h3>
+                <p>Embrace the snuggling season with stylish throws that will warm your hearts.</p>
+            </div>
+            <div class="blog-post">
+                <img src="data:image/png;base64,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" alt="Beautiful Bags">
+                <h3>14 Beautiful Bags That Express Your Unique Style</h3>
+                <p>Amp up your fashion game with bags that perfectly match your aesthetic.</p>
+            </div>
+            <div class="blog-post">
+                <img src="data:image/png;base64,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" alt="Gift Ideas">
+                <h3>The Best Gift Ideas for Kids of All Ages</h3>
+                <p>Shop the sweetest surprises for all little ones in your family.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="create-account">
+        <h2>Create Account</h2>
+        <div class="form-container">
+            <form>
+                <label for="full-name">Full Name *</label>
+                <input type="text" id="full-name" name="full-name" required>
+                
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="referral-code">Referral Code (Optional)</label>
+                <input type="text" id="referral-code" name="referral-code">
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>COPYRIGHT © ETSY PRIVATE LIMITED. ALL RIGHTS RESERVED</p>
+    </footer>
+</body>
+</html>
